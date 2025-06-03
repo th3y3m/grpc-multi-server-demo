@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcContracts.Protos";
+
+package category;
+
+service CategoryService {
+  rpc GetCategory (CategoryRequest) returns (Category);
+}
+
+message CategoryRequest {
+  int32 id = 1;
+}
+
+message Category {
+  int32 id = 1;
+  string categoryName = 2;
+}

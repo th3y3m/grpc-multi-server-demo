@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcContracts.Protos";
+
+package product;
+
+service ProductService {
+  rpc CreateProduct (CreateProductRequest) returns (ProductResponse);
+  rpc UpdateProduct (UpdateProductRequest) returns (ProductResponse);
+  rpc DeleteProduct (DeleteProductRequest) returns (Empty);
+
+  rpc GetProductById (ProductRequest) returns (ProductResponse);
+  rpc GetAllProducts (Empty) returns (ProductList);
+}
+
+message ProductRequest {
+  int32 id = 1;
+}
+
+message CreateProductRequest {
+  string productName = 1;
+  int32 categoryId = 2;
+}
+
+message UpdateProductRequest {
+  int32 id = 1;
+  string productName = 2;
+  int32 categoryId = 3;
+}
+
+message DeleteProductRequest {
+  int32 id = 1;
+}
+
+message ProductResponse {
+  int32 id = 1;
+  string productName = 2;
+  string categoryName = 4;
+}
+
+message ProductList {
+  repeated ProductResponse products = 1;
+}
+
+message Empty {}
