@@ -25,11 +25,6 @@ namespace ProductGrpcServer
 
             builder.Services.AddGrpcClient<CategoryService.CategoryServiceClient>(options =>
             {
-                options.Address = new Uri("https://your-category-service-url");
-            });
-
-            builder.Services.AddGrpcClient<CategoryService.CategoryServiceClient>(options =>
-            {
                 options.Address = new Uri(builder.Configuration["GrpcServices:CategoryServiceUrl"]);
             });
 

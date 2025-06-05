@@ -3,7 +3,7 @@ using Grpc.Core;
 using GrpcContracts.Protos;
 using MediatR;
 
-namespace CategoryGrpcServer.Services
+namespace CategoryGrpcServer.API
 {
 
     public class CategoryServiceImpl : CategoryService.CategoryServiceBase

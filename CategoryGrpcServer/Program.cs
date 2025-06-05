@@ -1,5 +1,5 @@
 using CategoryGrpcServer.Infrastructure.Persistence;
-using CategoryGrpcServer.Services;
+using CategoryGrpcServer.API;
 using GrpcContracts.Shared;
 using GrpcContracts.Shared.Interfaces;
 using Microsoft.EntityFrameworkCore;
