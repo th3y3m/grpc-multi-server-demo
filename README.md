@@ -15,7 +15,7 @@ This document explains the system architecture and how all components work toget
 
 ## 🖼️ System Overview
 
-![Architecture Diagram](https://github.com/th3y3m/grpc-multi-server-demo/tree/main/Diagrams/diagram.png)
+![Architecture Diagram](https://github.com/th3y3m/grpc-multi-server-demo/blob/main/Diagrams/diagram.png)
 
 ---
 
